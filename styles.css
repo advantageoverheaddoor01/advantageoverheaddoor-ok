@@ -1,0 +1,319 @@
+    
+/* GLOBAL STYLES */
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background: #000;
+    color: #fff;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    color: #1E90FF;
+    margin-bottom: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* HEADER */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: #000;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #A7D8FF;
+}
+
+/* NEON LOGO EFFECT */
+.neon-logo {
+    color: #1E90FF;
+    text-shadow:
+        0 0 5px #1E90FF,
+        0 0 10px #1E90FF,
+        0 0 20px #1E90FF,
+        0 0 40px #1E90FF,
+        0 0 80px #1E90FF;
+}
+
+.neon-logo span {
+    color: #A7D8FF;
+    text-shadow:
+        0 0 5px #A7D8FF,
+        0 0 10px #A7D8FF,
+        0 0 20px #A7D8FF,
+        0 0 40px #1E90FF;
+}
+
+nav a {
+    margin-left: 20px;
+    font-weight: 500;
+}
+
+nav .cta {
+    background: #1E90FF;
+    padding: 10px 18px;
+    border-radius: 5px;
+    color: #fff;
+}
+
+/* HERO SECTION */
+.hero {
+    background: linear-gradient(to bottom, rgba(0,0,0,0.8), #000),
+                url('https://images.unsplash.com/photo-1581091012184-5c7b4f3f1c9a?auto=format&fit=crop&w=1500&q=80');
+    background-size: cover;
+    background-position: center;
+    padding: 140px 40px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 48px;
+}
+
+.hero p {
+    color: #A7D8FF;
+    font-size: 20px;
+    max-width: 800px;
+    margin: 0 auto 20px;
+}
+
+.btn-primary {
+    background: #1E90FF;
+    padding: 14px 28px;
+    border-radius: 5px;
+    color: #fff;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.btn-secondary {
+    border: 2px solid #1E90FF;
+    padding: 12px 26px;
+    border-radius: 5px;
+    color: #1E90FF;
+    font-weight: bold;
+}
+
+/* WHY CHOOSE US */
+.why {
+    padding: 80px 40px;
+    background: #111418;
+}
+
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background: #000;
+    padding: 20px;
+    border-left: 4px solid #1E90FF;
+    border-radius: 4px;
+}
+
+/* SERVICES */
+.services {
+    padding: 80px 40px;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.service-card {
+    background: #111418;
+    padding: 20px;
+    border: 1px solid #1E90FF;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    box-shadow: 0 0 15px #1E90FF;
+}
+
+/* REVIEWS SECTION (your custom block) */
+.review-section {
+    padding: 24px;
+    background: #f7f7f7;
+    border-radius: 12px;
+    text-align: center;
+    margin: 40px auto;
+    max-width: 500px;
+    color: #000;
+}
+
+.review-btn {
+    display: inline-block;
+    padding: 14px 22px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: 0.2s ease;
+}
+
+.review-btn:hover {
+    background-color: #0056b3;
+}
+
+/* CONTACT */
+.contact {
+    padding: 80px 40px;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    background: #111418;
+    border: 1px solid #1E90FF;
+    color: #fff;
+    border-radius: 4px;
+}
+
+form textarea {
+    height: 150px;
+}
+
+form button {
+    background: #1E90FF;
+    padding: 14px 28px;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+form button:hover {
+    background: #33A8FF;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #000;
+    color: #777;
+}
+
+/* STICKY CALL & TEXT BUTTONS */
+.sticky-call,
+.sticky-text {
+    position: fixed;
+    bottom: 0;
+    width: 50%;
+    text-align: center;
+    padding: 22px 0;
+    font-size: 22px;
+    font-weight: 700;
+    text-decoration: none;
+    z-index: 9999;
+    display: none;
+}
+
+.sticky-call {
+    left: 0;
+    background: #1E90FF;
+    color: #fff;
+}
+
+.sticky-text {
+    right: 0;
+    background: #0bbf5f;
+    color: #fff;
+}
+
+/* MOBILE LAYOUT */
+@media (max-width: 768px) {
+
+    .sticky-call,
+    .sticky-text {
+        display: block;
+    }
+
+    .header {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px 20px;
+    }
+
+    .logo {
+        margin-bottom: 12px;
+        font-size: 26px;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+    }
+
+    nav a {
+        margin: 0;
+        font-size: 18px;
+    }
+
+    .hero {
+        padding: 80px 20px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+        align-items: center;
+    }
+
+    .hero-buttons a {
+        width: 90%;
+        max-width: 300px;
+        text-align: center;
+        margin: 0;
+    }
+
+    .why-grid,
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* REMOVE BLUE TAP HIGHLIGHT */
+* {
+    -webkit-tap-highlight-color: transparent !important;
+}
+
+a, a:focus, a:active,
+button, button:focus, button:active {
+    outline: none !important;
+    box-shadow: none !important;
+    border: none !important;
+}
