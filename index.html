@@ -9,19 +9,41 @@
     <meta name="description" content="Advantage Overhead Door provides fast, affordable garage door repair, broken spring replacement, and new garage door installation in Broken Arrow, Tulsa, and surrounding areas. Call 918-902-7464.">
     <meta name="keywords" content="garage door repair Broken Arrow, garage door repair Tulsa, broken spring repair, garage door installation, garage door opener repair, emergency garage door repair, Advantage Overhead Door">
 
-    <!-- OpenGraph (Facebook/Google Preview) -->
+    <!-- OpenGraph -->
     <meta property="og:title" content="Advantage Overhead Door | Broken Arrow & Tulsa Garage Door Repair">
     <meta property="og:description" content="Same-day garage door repair, broken spring replacement, and installation. Serving Broken Arrow, Tulsa, and surrounding areas. Call 918-902-7464.">
     <meta property="og:type" content="website">
-    
+    <meta property="og:image" content="assets/garage-preview.jpg">
     <meta property="og:url" content="https://yourdomain.com">
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
 
     <link rel="stylesheet" href="styles.css">
+
+    <!-- HEADER BUTTON ENHANCEMENT -->
+    <style>
+        nav .cta {
+            background: #ff6600;
+            padding: 10px 16px;
+            border-radius: 6px;
+            color: white;
+            font-weight: bold;
+            transition: background 0.25s ease, transform 0.15s ease;
+        }
+
+        nav .cta:hover {
+            background: #e05500;
+            transform: translateY(-2px);
+        }
+    </style>
 </head>
+
 <body>
+
+    <!-- Sticky Buttons -->
+    <a href="tel:918-902-7464" class="sticky-call">Call</a>
+    <a href="sms:918-902-7464" class="sticky-text">Text Us</a>
 
     <!-- HEADER -->
     <header class="header">
@@ -32,7 +54,15 @@
             <a href="#services">Services</a>
             <a href="#reviews">Reviews</a>
             <a href="#about">About</a>
-            <a href="#contact" class="cta">Schedule Service</a>
+
+            <!-- NEW HEADER BOOKING BUTTON -->
+            <a href="https://forms.gle/6i3y2SyXPCvCEvR36" 
+               class="cta" 
+               target="_blank">
+               Book Service
+            </a>
+
+            <a href="tel:918-902-7464" class="cta">Schedule Service</a>
         </nav>
     </header>
 
@@ -41,9 +71,22 @@
         <div class="hero-content">
             <h1>Broken Arrow & Tulsa’s Trusted Garage Door Repair Experts</h1>
             <p>Professional garage door repair, broken spring replacement, and new garage door installation in Broken Arrow, Tulsa, and all surrounding areas.</p>
+
             <div class="hero-buttons">
-                <a href="#contact" class="btn-primary">Book Service Now</a>
+                <!-- Google Form Button -->
+                <a href="https://forms.gle/6i3y2SyXPCvCEvR36"
+                   class="btn-primary"
+                   target="_blank">
+                   Book Service Now
+                </a>
+
                 <a href="tel:918-902-7464" class="btn-secondary">Call 918‑902‑7464</a>
+                <a href="sms:918-902-7464" class="btn-secondary">Text Us</a>
+
+                <a href="sms:918-902-7464?&body=Hi%2C%20I%20need%20garage%20door%20service" 
+                   class="btn-secondary">
+                   Text Us
+                </a>
             </div>
         </div>
     </section>
@@ -77,6 +120,7 @@
         <p style="text-align:center; margin-top:-10px; color:#A7D8FF;">
             Proudly serving Broken Arrow, Tulsa, and all surrounding areas.
         </p>
+
         <div class="service-grid">
             <div class="service-card">
                 <h3>Garage Door Repair</h3>
@@ -96,37 +140,68 @@
             </div>
         </div>
     </section>
-...
-    <!-- FOOTER -->
-    <footer>
-        <p>© 2026 Advantage Overhead Door. All rights reserved.</p>
-    </footer>
 
-    <!-- SEO KEYWORD BLOCK -->
-    <div style="display:none;">
-        garage door repair Broken Arrow,
-        garage door repair Tulsa,
-        broken spring repair,
-        garage door installation,
-        garage door opener repair
-    </div>
+    <!-- REVIEW SECTION -->
+    <section class="review-section" id="reviews">
+        <h2>Happy With Our Service?</h2>
+        <p>Your feedback helps other homeowners choose Advantage Overhead Door.</p>
 
-    <!-- STICKY CALL BUTTON (ADD THIS PART) -->
-    <a href="tel:9189027464" class="sticky-call"> Call</a>
-    <a href="sms:9189027464" class="sticky-text"> Text Us</a>
-    </a>
+        <a href="https://g.page/r/CTyyFyO_Ma-3EBM/review"
+           class="review-btn" 
+           target="_blank" 
+           rel="noopener">
+            ⭐ Leave Us a Review
+        </a>
+    </section>
+
+    <!-- INLINE CSS FOR REVIEW SECTION -->
+    <style>
+      .review-section {
+        padding: 24px;
+        background: #f7f7f7;
+        border-radius: 12px;
+        text-align: center;
+        margin: 20px auto;
+        max-width: 500px;
+        font-family: Arial, sans-serif;
+      }
+
+      .review-section h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+        color: #222;
+      }
+
+      .review-section p {
+        font-size: 16px;
+        color: #555;
+        margin-bottom: 20px;
+      }
+
+      .review-btn {
+        display: inline-block;
+        padding: 14px 22px;
+        background-color: #007bff;
+        color: #fff;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: bold;
+        border-radius: 8px;
+        transition: 0.2s ease;
+      }
+
+      .review-btn:hover {
+        background-color: #0056b3;
+      }
+
+      @media (max-width: 600px) {
+        .review-btn {
+          display: block;
+          width: 100%;
+          box-sizing: border-box;
+        }
+      }
+    </style>
 
 </body>
 </html>
-
-    <!-- REVIEWS -->
-    <section class="reviews" id="reviews">
-        <h2>Customer Reviews</h2>
-        <div class="review-grid">
-            <div class="review-card">
-                <p>“Fast, friendly, and affordable. They fixed my broken spring in under an hour.”</p>
-                <span>- Sarah M.</span>
-            </div>
-            <div class="review-card">
-                <p>“Honest pricing and great service. Best garage door repair in Tulsa.”</p>
-                <span>- Daniel R
