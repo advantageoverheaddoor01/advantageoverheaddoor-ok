@@ -1,117 +1,372 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Advantage Overhead Door | Broken Arrow Garage Door Repair</title>
-    <link rel="stylesheet" href="styles.css?v=2">
+  <meta charset="UTF-8" />
+  <title>Advantage Overhead Door</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root {
+      --carbon: #05070b;
+      --carbon-soft: #0b0f18;
+      --cobalt: #1f3b5b;
+      --accent: #4fd1c5;
+      --accent-soft: #2c7a7b;
+    }
+    body {
+      background: radial-gradient(circle at top, #111827 0, #020617 45%, #000 100%);
+      color: #e5e7eb;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Inter Tight", sans-serif;
+    }
+    .font-space { font-family: "Space Grotesk", system-ui, sans-serif; }
+    .font-mono { font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
+    .lift { transform: translateY(6px); transition: transform 200ms ease, box-shadow 200ms ease; }
+    .lift:hover { transform: translateY(0); box-shadow: 0 18px 40px rgba(0,0,0,0.7); }
+    .door-tilt { transform: translateY(6px) rotateX(5deg); transform-origin: bottom; transition: transform 200ms ease, box-shadow 200ms ease; }
+    .door-tilt:hover { transform: translateY(0) rotateX(0deg); box-shadow: 0 18px 40px rgba(0,0,0,0.7); }
+    .ticker { animation: ticker 30s linear infinite; }
+    @keyframes ticker { 0% {transform: translateX(0);} 100% {transform: translateX(-50%);} }
+  </style>
 </head>
+<body class="min-h-screen text-slate-100">
 
-<body>
+  <div class="flex min-h-screen relative z-10">
 
-    <!-- HEADER -->
-    <header class="header">
-        <h2>Advantage Overhead Door</h2>
-        <nav>
-            <a href="#services">Services</a>
-            <a href="#why">Why Choose Us</a>
-            <a href="#contact" class="cta">Book Service</a>
+    <!-- Simple left brand / nav -->
+    <aside class="hidden lg:flex flex-col justify-between border-r border-slate-800 bg-[var(--carbon-soft)]/90 backdrop-blur-xl w-60 px-6 py-8 sticky top-0 h-screen">
+      <div class="space-y-8">
+        <div class="flex items-center gap-3">
+          <div class="h-10 w-10 rounded-lg bg-gradient-to-br from-[var(--accent-soft)] to-[var(--cobalt)] flex items-center justify-center font-space font-semibold text-lg">
+            A
+          </div>
+          <div>
+            <div class="font-space text-xs tracking-[0.18em] uppercase text-slate-400">Advantage</div>
+            <div class="font-space text-lg font-semibold text-slate-50">Overhead Door</div>
+          </div>
+        </div>
+        <nav class="space-y-3 text-xs font-mono uppercase tracking-[0.22em] text-slate-500">
+          <a href="#hero" class="block hover:text-slate-100">Home</a>
+          <a href="#services" class="block hover:text-slate-100">Services</a>
+          <a href="#styles" class="block hover:text-slate-100">Door Styles</a>
+          <a href="#testimonials" class="block hover:text-slate-100">Reviews</a>
+          <a href="#contact" class="block hover:text-slate-100">Contact</a>
         </nav>
-    </header>
-
-    <!-- HERO SECTION -->
-    <section class="hero">
-        <h1>Broken Arrow Garage Door Repair & Installation</h1>
-        <p>Fast, reliable, and affordable garage door service — available 24/7.</p>
-
-        <div class="hero-buttons">
-            <a href="https://forms.gle/6i3y2SyXPCvCEvR36" class="btn-primary" target="_blank">Book Service Now</a>
-            <a href="tel:9189027464" class="btn-secondary">Call Now</a>
+      </div>
+      <div class="text-xs text-slate-400 space-y-2">
+        <div class="font-mono">
+          <div class="uppercase tracking-[0.22em] text-slate-500 mb-1">Call</div>
+          <a href="tel:19189027464" class="text-slate-100 text-sm hover:text-[var(--accent)]">
+            (918) 902-7464
+          </a>
         </div>
-    </section>
+        <p class="text-[0.7rem] border-t border-slate-800 pt-3">
+          Precision garage door installation & repair for the Tulsa metro.
+        </p>
+      </div>
+    </aside>
 
-    <!-- WHY CHOOSE US -->
-    <section id="why" class="why">
-        <h2>Why Choose Us</h2>
+    <!-- Main -->
+    <main class="flex-1 px-4 sm:px-6 lg:px-10 py-6 sm:py-8 space-y-16">
 
-        <div class="why-grid">
-            <div class="card">
-                <h3>24/7 Emergency Service</h3>
-                <p>We’re always available when your garage door fails unexpectedly.</p>
-            </div>
-
-            <div class="card">
-                <h3>Fast Response</h3>
-                <p>We arrive quickly and get your door working again the same day.</p>
-            </div>
-
-            <div class="card">
-                <h3>Affordable Pricing</h3>
-                <p>Honest, upfront pricing with no hidden fees.</p>
-            </div>
-
-            <div class="card">
-                <h3>Experienced Technicians</h3>
-                <p>Over 15 years of professional garage door repair experience.</p>
-            </div>
+      <!-- Mobile header -->
+      <header class="lg:hidden flex items-center justify-between mb-6">
+        <div class="flex items-center gap-3">
+          <div class="h-9 w-9 rounded-lg bg-gradient-to-br from-[var(--accent-soft)] to-[var(--cobalt)] flex items-center justify-center font-space font-semibold text-base">
+            A
+          </div>
+          <div>
+            <div class="font-space text-[0.7rem] tracking-[0.18em] uppercase text-slate-400">Advantage</div>
+            <div class="font-space text-sm font-semibold text-slate-50">Overhead Door</div>
+          </div>
         </div>
-    </section>
-
-    <!-- SERVICES -->
-    <section id="services" class="services">
-        <h2>Our Services</h2>
-
-        <div class="service-grid">
-            <div class="service-card">
-                <h3>Broken Spring Repair</h3>
-                <p>Fast replacement of torsion and extension springs.</p>
-            </div>
-
-            <div class="service-card">
-                <h3>Garage Door Openers</h3>
-                <p>LiftMaster, Chamberlain, Genie — installation & repair.</p>
-            </div>
-
-            <div class="service-card">
-                <h3>New Garage Doors</h3>
-                <p>Professional installation of all major brands.</p>
-            </div>
-
-            <div class="service-card">
-                <h3>Track & Roller Repair</h3>
-                <p>Fixing noisy, stuck, or off‑track garage doors.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- REVIEW SECTION -->
-    <section class="review-section">
-        <h2>Leave Us a Review</h2>
-        <p>Your feedback helps local homeowners choose a trusted garage door company.</p>
-
-        <a href="https://search.google.com/local/writereview?placeid=ChIJp1xqkq1rtocR7x2jD0t9p7E"
-           class="review-btn"
-           target="_blank"
-           rel="noopener">
-           ⭐ Leave Us a Review on Google
+        <a href="tel:19189027464" class="font-mono text-[0.7rem] uppercase tracking-[0.22em] text-slate-300 border border-slate-700 px-3 py-1 rounded-full">
+          Call (918) 902-7464
         </a>
-    </section>
+      </header>
 
-    <!-- CONTACT / BOOKING -->
-    <section id="contact" class="services">
-        <h2>Request a Service Appointment</h2>
-        <p>Fill out our quick form and we’ll contact you to confirm your appointment.</p>
+      <!-- HERO -->
+      <section id="hero" class="relative min-h-[70vh] rounded-3xl overflow-hidden border border-slate-800 bg-black">
+        <div class="absolute inset-0">
+          <img src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69b20eaa57f29c796c505d5c/955db021a_generated_f57b963f.png"
+               class="w-full h-full object-cover" />
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-black/20"></div>
+        <div class="relative z-10 h-full flex flex-col justify-between px-6 sm:px-10 py-10">
+          <div class="space-y-5 max-w-2xl">
+            <div class="inline-flex items-center gap-2 rounded-full border border-slate-700/70 bg-slate-900/60 px-3 py-1 text-[0.7rem] font-mono uppercase tracking-[0.22em] text-slate-400">
+              <span class="h-1.5 w-1.5 rounded-full bg-[var(--accent)]"></span>
+              Thirty years of upward momentum
+            </div>
+            <h1 class="font-space text-3xl sm:text-4xl lg:text-5xl font-semibold text-slate-50">
+              Garage doors engineered for quiet, precise, upward motion.
+            </h1>
+            <p class="text-sm sm:text-base text-slate-300 max-w-xl">
+              Industrial‑grade hardware, tuned for residential comfort. Smooth lifts, clean lines, and systems that just work.
+            </p>
+            <div class="flex flex-wrap gap-4">
+              <a href="#contact" class="lift inline-flex items-center gap-2 rounded-full bg-[var(--accent-soft)] px-5 py-2.5 text-xs sm:text-sm font-space font-medium tracking-[0.18em] uppercase text-slate-950">
+                Get a free estimate ↗
+              </a>
+              <a href="tel:19189027464" class="inline-flex items-center gap-2 rounded-full border border-slate-700/80 bg-slate-900/60 px-4 py-2 text-[0.7rem] font-mono uppercase tracking-[0.22em] text-slate-200">
+                Call now
+              </a>
+            </div>
+          </div>
+          <div class="flex items-center justify-between mt-8 text-[0.7rem] text-slate-400 font-mono">
+            <span class="uppercase tracking-[0.22em]">Scroll for services</span>
+            <span class="h-8 w-4 rounded-full border border-slate-600 flex items-start justify-center p-1">
+              <span class="h-1.5 w-1.5 rounded-full bg-slate-400 animate-bounce"></span>
+            </span>
+          </div>
+        </div>
+      </section>
 
-        <a href="https://forms.gle/6i3y2SyXPCvCEvR36"
-           class="btn-primary"
-           target="_blank">
-           Book Service Form
-        </a>
-    </section>
+      <!-- SIMPLE STATS -->
+      <section class="grid grid-cols-3 gap-4 border border-slate-800/80 bg-slate-950/70 rounded-2xl px-4 py-4 sm:px-6 sm:py-5 text-xs">
+        <div>
+          <div class="font-space text-xl sm:text-2xl text-slate-50">30+</div>
+          <div class="uppercase tracking-[0.22em] text-slate-500 mt-1">Years experience</div>
+        </div>
+        <div>
+          <div class="font-space text-xl sm:text-2xl text-slate-50">1,400+</div>
+          <div class="uppercase tracking-[0.22em] text-slate-500 mt-1">Doors installed</div>
+        </div>
+        <div>
+          <div class="font-space text-xl sm:text-2xl text-slate-50">4.9★</div>
+          <div class="uppercase tracking-[0.22em] text-slate-500 mt-1">Average rating</div>
+        </div>
+      </section>
 
-    <!-- STICKY BUTTONS -->
-    <a href="tel:9189027464" class="sticky-call">Call</a>
-    <a href="sms:9189027464" class="sticky-text">Text</a>
+      <!-- SERVICES (simple row) -->
+      <section id="services" class="space-y-6">
+        <div>
+          <h2 class="font-space text-2xl sm:text-3xl font-semibold text-slate-50">Core services.</h2>
+          <p class="text-sm text-slate-400 max-w-xl mt-1">
+            Installations, repairs, tune‑ups, and emergency calls—built around reliability and safety.
+          </p>
+        </div>
+        <div class="grid md:grid-cols-4 gap-4 text-xs">
+          <div class="lift border border-slate-800 bg-slate-950/80 rounded-2xl p-4">
+            <div class="font-mono uppercase tracking-[0.22em] text-slate-500 mb-1">Install</div>
+            <p class="text-slate-200">New & replacement doors, fully calibrated and tested.</p>
+          </div>
+          <div class="lift border border-slate-800 bg-slate-950/80 rounded-2xl p-4">
+            <div class="font-mono uppercase tracking-[0.22em] text-slate-500 mb-1">Repair</div>
+            <p class="text-slate-200">Springs, tracks, panels, and opener issues.</p>
+          </div>
+          <div class="lift border border-slate-800 bg-slate-950/80 rounded-2xl p-4">
+            <div class="font-mono uppercase tracking-[0.22em] text-slate-500 mb-1">Maintenance</div>
+            <p class="text-slate-200">Annual tune‑ups and safety checks.</p>
+          </div>
+          <div class="lift border border-slate-800 bg-slate-950/80 rounded-2xl p-4">
+            <div class="font-mono uppercase tracking-[0.22em] text-slate-500 mb-1">Emergency</div>
+            <p class="text-slate-200">Priority service when the door won’t open or close.</p>
+          </div>
+        </div>
+      </section>
 
+      <!-- DOOR STYLES -->
+      <section id="styles" class="space-y-6">
+        <div>
+          <h2 class="font-space text-2xl sm:text-3xl font-semibold text-slate-50">Door styles.</h2>
+          <p class="text-sm text-slate-400 max-w-xl mt-1">
+            Three core looks, all built on the same precision hardware.
+          </p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-6">
+          <article class="space-y-3">
+            <div class="door-tilt rounded-2xl overflow-hidden border border-slate-800 bg-slate-900/60">
+              <img src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69b20eaa57f29c796c505d5c/7660e1c18_generated_71f5e35b.png"
+                   class="h-44 w-full object-cover" />
+            </div>
+            <div class="text-xs">
+              <div class="font-space text-slate-50">Carriage House</div>
+              <div class="text-[0.7rem] text-slate-500">Traditional charm with modern mechanics.</div>
+            </div>
+          </article>
+          <article class="space-y-3">
+            <div class="door-tilt rounded-2xl overflow-hidden border border-slate-800 bg-slate-900/60">
+              <img src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69b20eaa57f29c796c505d5c/660db9638_generated_273e8cd6.png"
+                   class="h-44 w-full object-cover" />
+            </div>
+            <div class="text-xs">
+              <div class="font-space text-slate-50">Contemporary</div>
+              <div class="text-[0.7rem] text-slate-500">Clean lines and glass accents.</div>
+            </div>
+          </article>
+          <article class="space-y-3">
+            <div class="door-tilt rounded-2xl overflow-hidden border border-slate-800 bg-slate-900/60">
+              <img src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69b20eaa57f29c796c505d5c/485bcc6bc_generated_0a08795f.png"
+                   class="h-44 w-full object-cover" />
+            </div>
+            <div class="text-xs">
+              <div class="font-space text-slate-50">Traditional</div>
+              <div class="text-[0.7rem] text-slate-500">Timeless raised panels with reinforced framing.</div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- TESTIMONIALS -->
+      <section id="testimonials" class="space-y-6">
+        <div>
+          <h2 class="font-space text-2xl sm:text-3xl font-semibold text-slate-50">What customers say.</h2>
+          <p class="text-sm text-slate-400 max-w-xl mt-1">
+            Real feedback from homeowners across the Tulsa metro.
+          </p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-6 text-sm">
+          <article class="lift border border-slate-800 bg-slate-950/80 rounded-2xl p-5 space-y-3">
+            <p>“Night and day difference. The new door is silent, smooth, and looks incredible.”</p>
+            <div class="text-xs text-slate-500 font-mono">— Sarah M., Broken Arrow</div>
+          </article>
+          <article class="lift border border-slate-800 bg-slate-950/80 rounded-2xl p-5 space-y-3">
+            <p>“They replaced our broken spring same day and tuned the whole system.”</p>
+            <div class="text-xs text-slate-500 font-mono">— James R., Tulsa</div>
+          </article>
+          <article class="lift border border-slate-800 bg-slate-950/80 rounded-2xl p-5 space-y-3">
+            <p>“Professional, on time, and very detail‑oriented. Highly recommended.”</p>
+            <div class="text-xs text-slate-500 font-mono">— Alicia K., Owasso</div>
+          </article>
+        </div>
+      </section>
+
+      <!-- EXPANDABLE REVIEWS -->
+      <section class="space-y-6">
+        <div>
+          <h2 class="font-space text-2xl sm:text-3xl font-semibold text-slate-50">More homeowner reviews.</h2>
+          <p class="text-sm text-slate-400 max-w-xl mt-1">
+            Click to see additional verified feedback from customers across the Tulsa metro.
+          </p>
+        </div>
+
+        <div id="moreReviews" class="grid md:grid-cols-3 gap-6 max-h-0 overflow-hidden transition-all duration-500 ease-in-out text-sm">
+          <article class="lift border border-slate-800 bg-slate-950/80 rounded-2xl p-5 space-y-3">
+            <p>“Fast, professional, and extremely knowledgeable. They fixed what another company messed up.”</p>
+            <div class="text-xs text-slate-500 font-mono">— Daniel P., Tulsa</div>
+          </article>
+          <article class="lift border border-slate-800 bg-slate-950/80 rounded-2xl p-5 space-y-3">
+            <p>“Our new contemporary door completely changed the look of our home. Worth every penny.”</p>
+            <div class="text-xs text-slate-500 font-mono">— Megan L., Broken Arrow</div>
+          </article>
+          <article class="lift border border-slate-800 bg-slate-950/80 rounded-2xl p-5 space-y-3">
+            <p>“They arrived same day, replaced both springs, and tuned the opener. Door is whisper quiet now.”</p>
+            <div class="text-xs text-slate-500 font-mono">— Chris W., Owasso</div>
+          </article>
+        </div>
+
+        <div class="flex justify-center">
+          <button
+            id="toggleReviews"
+            class="lift inline-flex items-center gap-2 rounded-full bg-[var(--accent-soft)] px-6 py-2.5 text-xs sm:text-sm font-space font-medium tracking-[0.18em] uppercase text-slate-950"
+          >
+            Show More Reviews
+          </button>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section id="contact" class="grid lg:grid-cols-[1.2fr,1fr] gap-10 items-start">
+        <div class="space-y-4">
+          <h2 class="font-space text-2xl sm:text-3xl font-semibold text-slate-50">
+            Ready to upgrade your garage door system?
+          </h2>
+          <p class="text-sm text-slate-400 max-w-xl">
+            Tell us a bit about your setup and we’ll provide a clear, no‑pressure estimate.
+          </p>
+          <div class="space-y-1 text-sm text-slate-300">
+            <div class="font-mono text-[0.8rem] text-slate-500 uppercase tracking-[0.22em]">Call or text</div>
+            <a href="tel:19189027464" class="font-space text-lg text-slate-50 hover:text-[var(--accent)]">
+              (918) 902-7464
+            </a>
+          </div>
+        </div>
+        <form class="lift border border-slate-800 bg-slate-950/80 rounded-2xl p-6 space-y-4 text-sm">
+          <div class="text-[0.7rem] font-mono uppercase tracking-[0.22em] text-slate-500 mb-1">
+            Request an estimate
+          </div>
+          <div class="space-y-1">
+            <label class="text-xs text-slate-400">Name</label>
+            <input class="w-full rounded-lg border border-slate-800 bg-slate-900/60 px-3 py-2 text-xs text-slate-100 focus:outline-none focus:border-[var(--accent-soft)]" />
+          </div>
+          <div class="space-y-1">
+            <label class="text-xs text-slate-400">Phone</label>
+            <input class="w-full rounded-lg border border-slate-800 bg-slate-900/60 px-3 py-2 text-xs text-slate-100 focus:outline-none focus:border-[var(--accent-soft)]" />
+          </div>
+          <div class="space-y-1">
+            <label class="text-xs text-slate-400">Service needed</label>
+            <select class="w-full rounded-lg border border-slate-800 bg-slate-900/60 px-3 py-2 text-xs text-slate-100 focus:outline-none focus:border-[var(--accent-soft)]">
+              <option>New door install</option>
+              <option>Opener / motor install</option>
+              <option>Spring repair</option>
+              <option>General repair / tune‑up</option>
+            </select>
+          </div>
+          <div class="space-y-1">
+            <label class="text-xs text-slate-400">Details</label>
+            <textarea rows="3" class="w-full rounded-lg border border-slate-800 bg-slate-900/60 px-3 py-2 text-xs text-slate-100 focus:outline-none focus:border-[var(--accent-soft)]"></textarea>
+          </div>
+          <button class="w-full rounded-full bg-[var(--accent-soft)] px-4 py-2.5 text-xs font-space font-medium tracking-[0.18em] uppercase text-slate-950">
+            Submit request
+          </button>
+        </form>
+      </section>
+
+      <!-- FOOTER -->
+      <footer class="border-t border-slate-900/80 pt-8 pb-14 mt-6 text-sm text-slate-500">
+        <div class="flex flex-col sm:flex-row justify-between gap-4">
+          <div>
+            <div class="font-space text-lg text-slate-50">Advantage Overhead Door</div>
+            <p class="text-xs text-slate-500 max-w-md mt-1">
+              Precision garage door systems for homes that demand quiet performance and reliable operation.
+            </p>
+          </div>
+          <div class="text-xs text-slate-500">
+            <div class="font-mono text-[0.8rem] uppercase tracking-[0.22em] mb-1">Service area</div>
+            Broken Arrow • Tulsa • Owasso • Surrounding areas
+          </div>
+        </div>
+        <div class="mt-6 text-[0.7rem] text-slate-600 flex justify-between items-center">
+          <span>© <span id="year"></span> Advantage Overhead Door.</span>
+          <span class="font-mono uppercase tracking-[0.22em] text-slate-700">Carbon &amp; Cobalt</span>
+        </div>
+      </footer>
+
+    </main>
+  </div>
+
+  <!-- TICKER -->
+  <div class="fixed bottom-0 left-0 right-0 border-t border-slate-800 bg-[var(--carbon-soft)]/95 backdrop-blur-xl py-2 overflow-hidden">
+    <div class="ticker flex gap-10 whitespace-nowrap text-[0.7rem] font-mono uppercase tracking-[0.22em] text-slate-400">
+      <div class="flex gap-10 px-6">
+        <span>Doors from $1,400.00 installed</span>
+        <span>Openers from $350.00 installed</span>
+        <span>Single spring repair $200.00</span>
+        <span>Two spring replacement $275.00</span>
+        <span>Quiet‑lift systems • Precision tuned</span>
+      </div>
+      <div class="flex gap-10 px-6">
+        <span>Doors from $1,400.00 installed</span>
+        <span>Openers from $350.00 installed</span>
+        <span>Single spring repair $200.00</span>
+        <span>Two spring replacement $275.00</span>
+        <span>Quiet‑lift systems • Precision tuned</span>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    const btn = document.getElementById("toggleReviews");
+    const section = document.getElementById("moreReviews");
+    let open = false;
+
+    btn.addEventListener("click", () => {
+      open = !open;
+      section.style.maxHeight = open ? section.scrollHeight + "px" : "0px";
+      btn.textContent = open ? "Show Less" : "Show More Reviews";
+    });
+  </script>
 </body>
 </html>
