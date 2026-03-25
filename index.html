@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
@@ -56,7 +55,6 @@
         </nav>
       </div>
 
-      <!-- CONTACT + HOURS -->
       <div class="text-xs text-slate-400 space-y-4">
         <div class="font-mono">
           <div class="uppercase tracking-[0.22em] text-slate-500 mb-1">Call</div>
@@ -79,7 +77,7 @@
 
     <!-- MAIN CONTENT -->
     <main class="flex-1 px-4 sm:px-6 lg:px-10 py-6 sm:py-8 space-y-16 bg-slate-900 text-slate-100">
-      
+
       <!-- MOBILE HEADER -->
       <header class="lg:hidden flex items-center justify-between mb-6">
         <div class="flex items-center gap-3">
@@ -124,6 +122,7 @@
             </div>
           </div>
         </div>
+      </section>
       </section>
 
       <!-- STATS -->
@@ -223,7 +222,7 @@
         </div>
       </section>
 
-      <!-- CTA -->
+      <!-- CONTACT -->
       <section id="contact" class="grid lg:grid-cols-[1.2fr,1fr] gap-10 items-start">
         <div class="space-y-4">
           <h2 class="font-space text-2xl sm:text-3xl font-semibold text-slate-50">
@@ -240,24 +239,83 @@
           </div>
         </div>
 
-        <form class="lift border border-slate-800 bg-slate-950/80 rounded-2xl p-6 space-y-4 text-sm">
+        <!-- SUCCESS BANNER -->
+        <div id="successBanner" class="hidden mb-4 rounded-lg bg-green-600/20 border border-green-600 text-green-300 p-3 text-sm">
+          Your request has been sent! I’ll text you shortly.
+        </div>
+
+        <!-- FIXED FORM -->
+        <form action="send-text.php" method="POST" class="lift border border-slate-800 bg-slate-950/80 rounded-2xl p-6 space-y-4 text-sm">
           <div class="text-[0.7rem] font-mono uppercase tracking-[0.22em] text-slate-500 mb-1">
             Request an estimate
           </div>
-          <input placeholder="Name" class="w-full rounded-lg border border-slate-800 bg-slate-900/60 px-3 py-2 text-xs text-slate-100" />
-          <input placeholder="Phone" class="w-full rounded-lg border border-slate-800 bg-slate-900/60 px-3 py-2 text-xs text-slate-100" />
-          <select class="w-full rounded-lg border border-slate-800 bg-slate-900/60 px-3 py-2 text-xs text-slate-100">
+
+          <input 
+            name="name"
+            placeholder="Name" 
+            required
+            class="w-full rounded-lg border border-slate-800 bg-slate-900/60 px-3 py-2 text-xs text-slate-100" 
+          />
+
+          <input 
+            name="phone"
+            placeholder="Phone" 
+            required
+            class="w-full rounded-lg border border-slate-800 bg-slate-900/60 px-3 py-2 text-xs text-slate-100" 
+          />
+
+          <select 
+            name="service"
+            class="w-full rounded-lg border border-slate-800 bg-slate-900/60 px-3 py-2 text-xs text-slate-100"
+          >
             <option>New door install</option>
             <option>Opener install</option>
             <option>Spring repair</option>
             <option>General repair</option>
           </select>
-          <textarea rows="3" placeholder="Details…" class="w-full rounded-lg border border-slate-800 bg-slate-900/60 px-3 py-2 text-xs text-slate-100"></textarea>
-          <button class="w-full rounded-full bg-[var(--accent-soft)] px-4 py-2.5 text-xs font-space font-medium uppercase text-slate-950">
+
+          <textarea 
+            name="details"
+            rows="3" 
+            placeholder="Details…" 
+            class="w-full rounded-lg border border-slate-800 bg-slate-900/60 px-3 py-2 text-xs text-slate-100"
+          ></textarea>
+
+          <button 
+            type="submit"
+            class="w-full rounded-full bg-[var(--accent-soft)] px-4 py-2.5 text-xs font-space font-medium uppercase text-slate-950"
+          >
             Submit request
           </button>
         </form>
       </section>
 
       <!-- FOOTER -->
-      <footer class="border-t border-slate-900/80 pt-8 pb-14 mt-6 text
+      <footer class="border-t border-slate-800 pt-6 mt-10 text-xs text-slate-500">
+        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+          <div class="font-space text-slate-400">
+            © 2024 Advantage Overhead Door. All rights reserved.
+          </div>
+          <div class="flex gap-4 font-mono uppercase tracking-[0.22em]">
+            <a href="#hero" class="hover:text-slate-300">Home</a>
+            <a href="#services" class="hover:text-slate-300">Services</a>
+            <a href="#styles" class="hover:text-slate-300">Styles</a>
+            <a href="#contact" class="hover:text-slate-300">Contact</a>
+          </div>
+        </div>
+      </footer>
+
+    </main>
+  </div>
+
+  <!-- SUCCESS BANNER SCRIPT -->
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    if (params.get("sent") === "1") {
+      document.getElementById("successBanner").classList.remove("hidden");
+      window.scrollTo({ top: document.getElementById("contact").offsetTop - 40, behavior: "smooth" });
+    }
+  </script>
+
+</body>
+</html>
