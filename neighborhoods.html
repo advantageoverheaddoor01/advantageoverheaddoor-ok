@@ -7,147 +7,81 @@
   <script src="https://cdn.tailwindcss.com"></script>
 
   <style>
-    :root {
-      --carbon: #05070b;
-      --carbon-soft: #0b0f18;
-      --cobalt: #1f3b5b;
-      --accent: #4fd1c5;
-      --accent-soft: #2c7a7b;
-    }
     body {
-      background: radial-gradient(circle at top, #111827 0, #020617 45%, #000 100%);
-      color: #e5e7eb;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Inter Tight", sans-serif;
+      background: #0f172a;
+      color: #e2e8f0;
+      font-family: system-ui, sans-serif;
     }
-    .font-space { font-family: "Space Grotesk", system-ui, sans-serif; }
-    .font-mono { font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
-    .lift { transform: translateY(6px); transition: transform 200ms ease, box-shadow 200ms ease; }
-    .lift:hover { transform: translateY(0); box-shadow: 0 18px 40px rgba(0,0,0,0.7); }
+    .lift {
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .lift:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    }
   </style>
 </head>
 
-<body class="min-h-screen text-slate-100">
+<body class="min-h-screen">
 
-  <div class="flex min-h-screen relative z-10">
+  <header class="bg-slate-900 border-b border-slate-800 p-4">
+    <div class="max-w-5xl mx-auto flex justify-between items-center">
+      <h1 class="text-xl font-semibold text-slate-100">Advantage Overhead Door</h1>
+      <a href="/advantageoverheaddoor-ok/index.html" class="text-slate-300 hover:text-white text-sm">
+        Home
+      </a>
+    </div>
+  </header>
 
-    <!-- SIDEBAR -->
-    <aside class="hidden lg:flex flex-col justify-between border-r border-slate-800 bg-[var(--carbon-soft)]/90 backdrop-blur-xl w-60 px-6 py-8 sticky top-0 h-screen">
-      <div class="space-y-8">
-        <div class="flex items-center gap-3">
-          <div class="h-10 w-10 rounded-lg bg-gradient-to-br from-[var(--accent-soft)] to-[var(--cobalt)] flex items-center justify-center font-space font-semibold text-lg">
-            A
-          </div>
-          <div>
-            <div class="font-space text-xs tracking-[0.18em] uppercase text-slate-400">Advantage</div>
-            <div class="font-space text-lg font-semibold text-slate-50">Overhead Door</div>
-          </div>
-        </div>
+  <main class="max-w-5xl mx-auto p-6 space-y-8">
 
-        <nav class="space-y-3 text-xs font-mono uppercase tracking-[0.22em] text-slate-500">
-          <a href="/advantageoverheaddoor-ok/index.html" class="block hover:text-slate-100">Home</a>
-          <a href="/advantageoverheaddoor-ok/neighborhoods.html" class="block text-slate-100">Neighborhoods We Serve</a>
-          <a href="#services" class="block hover:text-slate-100">Services</a>
-          <a href="#styles" class="block hover:text-slate-100">Door Styles</a>
-          <a href="#testimonials" class="block hover:text-slate-100">Reviews</a>
-          <a href="#contact" class="block hover:text-slate-100">Contact</a>
-        </nav>
-      </div>
-
-      <div class="text-xs text-slate-400 space-y-4">
-        <div class="font-mono">
-          <div class="uppercase tracking-[0.22em] text-slate-500 mb-1">Call</div>
-          <a href="tel:19189027464" class="text-slate-100 text-sm hover:text-[var(--accent)]">
-            (918) 902-7464
-          </a>
-        </div>
-
-        <div class="font-mono">
-          <div class="uppercase tracking-[0.22em] text-slate-500 mb-1">Hours</div>
-          <div class="text-slate-300">Monday–Sunday</div>
-          <div class="text-slate-100 font-semibold">24/7</div>
-        </div>
-
-        <p class="text-[0.7rem] border-t border-slate-800 pt-3">
-          Precision garage door installation & repair for the Tulsa metro.
-        </p>
-      </div>
-    </aside>
-
-    <!-- MAIN CONTENT -->
-    <main class="flex-1 px-4 sm:px-6 lg:px-10 py-6 sm:py-8 space-y-12 bg-slate-900 text-slate-100">
-
-      <!-- MOBILE HEADER -->
-      <header class="lg:hidden flex items-center justify-between mb-6">
-        <div class="flex items-center gap-3">
-          <div class="h-9 w-9 rounded-lg bg-gradient-to-br from-[var(--accent-soft)] to-[var(--cobalt)] flex items-center justify-center font-space font-semibold text-base">
-            A
-          </div>
-          <div>
-            <div class="font-space text-[0.7rem] tracking-[0.18em] uppercase text-slate-400">Advantage</div>
-            <div class="font-space text-sm font-semibold text-slate-50">Overhead Door</div>
-          </div>
-        </div>
-        <a href="/advantageoverheaddoor-ok/index.html" class="font-mono text-[0.7rem] uppercase tracking-[0.22em] text-slate-300 border border-slate-700 px-3 py-1 rounded-full">
-          Call (918) 902-7464
-        </a>
-      </header>
-
-      <!-- PAGE TITLE -->
-      <section class="space-y-4">
-        <h1 class="font-space text-3xl sm:text-4xl font-semibold text-slate-50">
-          Neighborhoods We Serve
-        </h1>
-        <p class="text-slate-300 max-w-2xl text-sm sm:text-base">
-          We proudly provide fast, reliable garage door repair throughout Broken Arrow, Tulsa, and the surrounding neighborhoods. Select your area below to view services, recent jobs, and local information.
-        </p>
-      </section>
-
-      <!-- CLICKABLE NEIGHBORHOOD LIST -->
-      <section class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 text-sm">
-
-        <a href="/advantageoverheaddoor-ok/forest-ridge-garage-door-repair.html"
-           class="lift border border-slate-800 bg-slate-950/70 rounded-2xl p-4 block hover:bg-slate-900/80">
-          Garage Door Repair in Forest Ridge
-        </a>
-
-        <a href="/advantageoverheaddoor-ok/stone-wood-hills-garage-door-repair.html"
-           class="lift border border-slate-800 bg-slate-950/70 rounded-2xl p-4 block hover:bg-slate-900/80">
-          Garage Door Repair in Stone Wood Hills
-        </a>
-
-        <a href="/advantageoverheaddoor-ok/aspen-creek-garage-door-repair.html"
-           class="lift border border-slate-800 bg-slate-950/70 rounded-2xl p-4 block hover:bg-slate-900/80">
-          Garage Door Repair in Aspen Creek
-        </a>
-
-        <a href="/advantageoverheaddoor-ok/berwick-south-garage-door-repair.html"
-           class="lift border border-slate-800 bg-slate-950/70 rounded-2xl p-4 block hover:bg-slate-900/80">
-          Garage Door Repair in Berwick South
-        </a>
-
-        <a href="/advantageoverheaddoor-ok/indian-springs-garage-door-repair.html"
-           class="lift border border-slate-800 bg-slate-950/70 rounded-2xl p-4 block hover:bg-slate-900/80">
-          Garage Door Repair in Indian Springs
-        </a>
-
-        <a href="/advantageoverheaddoor-ok/south-tulsa-garage-door-repair.html"
-           class="lift border border-slate-800 bg-slate-950/70 rounded-2xl p-4 block hover:bg-slate-900/80">
-          Garage Door Repair in South Tulsa
-        </a>
-
-        <a href="/advantageoverheaddoor-ok/cedar-ridge-garage-door-repair.html"
-           class="lift border border-slate-800 bg-slate-950/70 rounded-2xl p-4 block hover:bg-slate-900/80">
-          Garage Door Repair in Cedar Ridge
-        </a>
-
-      </section>
-
-      <p class="text-slate-400 text-sm max-w-xl">
-        If you don’t see your neighborhood listed, call or text us — we serve all of Broken Arrow and Tulsa.
+    <section>
+      <h2 class="text-3xl font-bold text-white mb-2">Neighborhoods We Serve</h2>
+      <p class="text-slate-300 max-w-2xl">
+        Choose your neighborhood below to view garage door repair services available in your area.
       </p>
+    </section>
 
-    </main>
-  </div>
+    <section class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+
+      <a href="/advantageoverheaddoor-ok/forest-ridge-garage-door-repair.html"
+         class="lift p-4 rounded-xl bg-slate-800 border border-slate-700 hover:bg-slate-700">
+        Garage Door Repair in Forest Ridge
+      </a>
+
+      <a href="/advantageoverheaddoor-ok/stone-wood-hills-garage-door-repair.html"
+         class="lift p-4 rounded-xl bg-slate-800 border border-slate-700 hover:bg-slate-700">
+        Garage Door Repair in Stone Wood Hills
+      </a>
+
+      <a href="/advantageoverheaddoor-ok/aspen-creek-garage-door-repair.html"
+         class="lift p-4 rounded-xl bg-slate-800 border border-slate-700 hover:bg-slate-700">
+        Garage Door Repair in Aspen Creek
+      </a>
+
+      <a href="/advantageoverheaddoor-ok/berwick-south-garage-door-repair.html"
+         class="lift p-4 rounded-xl bg-slate-800 border border-slate-700 hover:bg-slate-700">
+        Garage Door Repair in Berwick South
+      </a>
+
+      <a href="/advantageoverheaddoor-ok/indian-springs-garage-door-repair.html"
+         class="lift p-4 rounded-xl bg-slate-800 border border-slate-700 hover:bg-slate-700">
+        Garage Door Repair in Indian Springs
+      </a>
+
+      <a href="/advantageoverheaddoor-ok/south-tulsa-garage-door-repair.html"
+         class="lift p-4 rounded-xl bg-slate-800 border border-slate-700 hover:bg-slate-700">
+        Garage Door Repair in South Tulsa
+      </a>
+
+      <a href="/advantageoverheaddoor-ok/cedar-ridge-garage-door-repair.html"
+         class="lift p-4 rounded-xl bg-slate-800 border border-slate-700 hover:bg-slate-700">
+        Garage Door Repair in Cedar Ridge
+      </a>
+
+    </section>
+
+  </main>
 
 </body>
 </html>
