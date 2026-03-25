@@ -239,7 +239,6 @@
           </div>
         </div>
 
-        <!-- SUCCESS BANNER -->
      <!-- SUCCESS BANNER -->
 <div id="successBanner" class="hidden mb-4 rounded-lg bg-green-600/20 border border-green-600 text-green-300 p-3 text-sm">
   Your request has been sent! I’ll text you shortly.
@@ -316,11 +315,13 @@
 
   <!-- SUCCESS BANNER SCRIPT -->
   <script>
-    const params = new URLSearchParams(window.location.search);
-    if (params.get("sent") === "1") {
-      document.getElementById("successBanner").classList.remove("hidden");
-      window.scrollTo({ top: document.getElementById("contact").offsetTop - 40, behavior: "smooth" });
-    }
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("success") === "1") {
+    document.getElementById("successBanner").classList.remove("hidden");
+    window.scrollTo({ top: document.getElementById("contact").offsetTop - 40, behavior: "smooth" });
+  }
+</script>
+
   </script>
 
 </body>
