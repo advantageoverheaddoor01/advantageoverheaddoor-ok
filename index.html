@@ -5,6 +5,7 @@
   <title>Advantage Overhead Door</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <script src="https://cdn.tailwindcss.com"></script>
+
   <!-- LOCAL BUSINESS SCHEMA -->
   <script type="application/ld+json">
   {
@@ -69,6 +70,129 @@
   }
   </script>
 
+  <!-- SERVICE SCHEMA -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Garage Door Services",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Advantage Overhead Door"
+    },
+    "areaServed": [
+      "Tulsa",
+      "Midtown Tulsa",
+      "South Tulsa",
+      "Brookside",
+      "Downtown Tulsa",
+      "East Tulsa",
+      "Cherry Street",
+      "Woodland Hills",
+      "Riverside",
+      "Broken Arrow",
+      "Bixby",
+      "Jenks",
+      "Owasso",
+      "Sand Springs",
+      "Glenpool",
+      "Sapulpa",
+      "Coweta"
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Garage Door Services",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Garage Door Repair" }},
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Garage Door Installation" }},
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Garage Door Spring Replacement" }},
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Garage Door Opener Repair" }},
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Garage Door Cable Repair" }},
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Garage Door Maintenance" }}
+      ]
+    }
+  }
+  </script>
+
+  <!-- FAQ SCHEMA -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Do you offer same-day garage door repair in Tulsa?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, Advantage Overhead Door provides fast, same-day service across Tulsa and all surrounding areas."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you repair broken garage door springs?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, we specialize in torsion and extension spring replacement for all garage door types."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you install new garage doors?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We install all major garage door brands and styles for residential properties."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are you available 24/7?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, we are available 24/7 for emergency garage door repairs."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- REVIEW SCHEMA -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Advantage Overhead Door",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "140"
+    }
+  }
+  </script>
+
+  <!-- BREADCRUMB SCHEMA -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://advantageoverheaddoor01.github.io/advantageoverheaddoor-ok/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Garage Door Services",
+        "item": "https://advantageoverheaddoor01.github.io/advantageoverheaddoor-ok/#services"
+      }
+    ]
+  }
+  </script>
+
+  <!-- YOUR CSS -->
   <style>
     :root {
       --carbon: #05070b;
@@ -92,6 +216,7 @@
     @keyframes ticker { 0% {transform: translateX(0);} 100% {transform: translateX(-50%);} }
   </style>
 </head>
+
 <body class="min-h-screen text-slate-100">
 
   <div class="flex min-h-screen relative z-10">
