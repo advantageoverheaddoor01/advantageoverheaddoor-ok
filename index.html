@@ -693,20 +693,71 @@
 
       </section>
 
-      <!-- FOOTER -->
-      <footer class="border-t border-slate-800 pt-6 mt-10 text-xs text-slate-500">
-        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
-          <div class="font-space text-slate-400">
-            © 2024 Advantage Overhead Door. All rights reserved.
-          </div>
-          <div class="flex gap-4 font-mono uppercase tracking-[0.22em]">
-            <a href="#hero" class="hover:text-slate-300">Home</a>
-            <a href="#services" class="hover:text-slate-300">Services</a>
-            <a href="#styles" class="hover:text-slate-300">Styles</a>
-            <a href="#contact" class="hover:text-slate-300">Contact</a>
-          </div>
+      <!-- NEW FOOTER -->
+    <footer class="bg-[var(--carbon)] border-t border-slate-800 py-16 mt-20">
+      <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-12">
+
+        <!-- BRAND -->
+        <div>
+          <h3 class="font-space text-xl font-semibold text-slate-50 mb-3">
+            Advantage Overhead Door
+          </h3>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Fast, honest, and reliable garage door repair serving the Tulsa metro.
+            Family‑owned and operated with 30+ years of experience.
+          </p>
         </div>
- </footer>
+
+        <!-- CONTACT -->
+        <div>
+          <h4 class="font-semibold text-slate-100 mb-3">Contact</h4>
+          <ul class="space-y-2 text-slate-400 text-sm">
+            <li>Broken Arrow, OK</li>
+            <li>Phone: <a href="tel:9189027464" class="text-[var(--accent)] hover:underline">918‑902‑7464</a></li>
+            <li>Hours: 7 Days a Week</li>
+            <li>Same‑Day Service Available</li>
+          </ul>
+        </div>
+
+        <!-- SERVICES -->
+        <div>
+          <h4 class="font-semibold text-slate-100 mb-3">Services</h4>
+          <ul class="space-y-2 text-slate-400 text-sm">
+            <li>Garage Door Spring Repair</li>
+            <li>Opener Repair & Installation</li>
+            <li>Cable Repair</li>
+            <li>Roller & Track Repair</li>
+            <li>Off‑Track Door Repair</li>
+            <li>Full Door Replacement</li>
+          </ul>
+        </div>
+
+        <!-- SERVICE AREAS -->
+        <div>
+          <h4 class="font-semibold text-slate-100 mb-3">Service Areas</h4>
+          <ul class="space-y-2 text-slate-400 text-sm">
+            <li>Tulsa</li>
+            <li>Broken Arrow</li>
+            <li>Bixby</li>
+            <li>Jenks</li>
+            <li>Owasso</li>
+            <li>And surrounding areas</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- BOTTOM BAR -->
+      <div class="mt-12 border-t border-slate-800 pt-6 text-center">
+        <p class="text-slate-500 text-xs">
+          © <span id="year"></span> Advantage Overhead Door. All rights reserved.
+        </p>
+      </div>
+
+      <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+      </script>
+    </footer>
 
     </main>
   </div>
@@ -719,7 +770,6 @@
     }
   </script>
 
-  <a href="garage-door-repair-tulsa.html">Garage Door Repair in Tulsa</a>
 
 </body>
 </html>
